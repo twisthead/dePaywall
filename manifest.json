@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "dePaywall",
+  "version": "1.0",
+  "description": "Removes paywall from websites with one click.",
+
+  "permissions": [
+  "webNavigation",
+  "tabs", 
+  "activeTab",
+  "storage"
+],
+
+  "browser_action": {
+  "default_icon": "icons/border-48.png",
+  "default_title": "dePaywall"
+},
+
+    "icons": {
+    "48": "icons/border-48.png",
+    "96": "icons/border-96.png"
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["depaywall.js"]
+  }
+],
+"background": {
+  "scripts": ["background.js"]
+}
+
+
+}
